@@ -15,8 +15,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Auto pairs for '(' '[' '{' 
     Plug 'jiangmiao/auto-pairs'
     " Themes
-    Plug 'joshdick/onedark.vim'
-    "Plug 'dracula/vim'
+
+    " Plug 'joshdick/onedark.vim'
+    Plug 'morhetz/gruvbox'
 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-python']
@@ -30,7 +31,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     
     "airline
     Plug 'vim-airline/vim-airline'
- 
+
+
+    "vim-terraform https://github.com/juliosueiras/vim-terraform-completion
+    Plug 'hashivim/vim-terraform'
+    Plug 'vim-syntastic/syntastic'
+    Plug 'juliosueiras/vim-terraform-completion'
+
+    "golang
+    "Plug 'fatih/vim-go'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+    "markdown preview
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 
 
